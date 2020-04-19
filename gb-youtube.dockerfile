@@ -12,6 +12,6 @@ RUN sed -i "s#deb http://deb.debian.org/debian buster main#deb http://deb.debian
       gcc \
       g++ \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/lib/apt/lists/*
 
 CMD ["/bin/bash"]
