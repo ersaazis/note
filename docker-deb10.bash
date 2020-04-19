@@ -1,5 +1,5 @@
 # install docker debian10 test
-apt update &&  apt full-upgrade -y
+apt update &&  apt full-upgrade --no-install-suggests -y
 apt-get install \
     apt-transport-https \
     ca-certificates \
