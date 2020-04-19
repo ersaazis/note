@@ -5,6 +5,8 @@ RUN sed -i "s#deb http://deb.debian.org/debian buster main#deb http://deb.debian
     && apt-get install -y --no-install-recommends --no-install-suggests \
       wget \
       gcc \
+      xvfb \
+      x11vnc \
       g++ \
       firefox-esr \
       firefoxdriver \
@@ -14,4 +16,5 @@ RUN sed -i "s#deb http://deb.debian.org/debian buster main#deb http://deb.debian
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-CMD ["/bin/bash"]
+CMD ["Xvfb","-br","-nolisten","tcp","-screen","0","800x600x24",":1"]
+CMD ["x11vnc","-display",":1"]
