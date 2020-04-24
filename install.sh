@@ -14,6 +14,6 @@ rm data.zip
 mv data docker
 wget https://raw.githubusercontent.com/ersaazis/note/master/run.sh -O ${HOME}/docker/run.sh
 docker build -t gbyt:1 ${HOME}/docker/
-wget https://github.com/ersaazis/note/blob/master/gen.sh
+wget https://raw.githubusercontent.com/ersaazis/note/master/gen.sh
 chmod +x gen.sh
 ./gen.sh
