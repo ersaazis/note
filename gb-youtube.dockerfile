@@ -2,7 +2,7 @@ FROM debian:buster-slim
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends --no-install-suggests \
-       firefox-esr cpulimit x11vnc xvfb \
+       firefox-esr x11vnc xvfb \
     && apt-get clean 
 
 COPY run.sh /code/run.sh
