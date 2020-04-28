@@ -1,13 +1,13 @@
 #!/bin/bash
 echo Nama Docker :
 read name
-echo Youtube Url :
-read url
+echo APP ID :
+read id
 echo Port VNC :
 read port
 echo Proxy :
 read proxy
 
-docker container create -e URL=$url -e PROXY=$proxy -p $port:5900 --name $name --cpus=0.9 gbyt:1
+docker container create -e id=$ID -e PROXY=$proxy -p $port:5900 --name $name --cpus=0.9 gbyt:1
 docker container start $name
 docker exec -i -t $name /bin/bash
